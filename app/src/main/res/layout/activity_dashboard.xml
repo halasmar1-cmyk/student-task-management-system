@@ -1,62 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#F5F7FA">
+    android:background="#F4F7FC"
+    android:fillViewport="true">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Code Titans"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#1565C0"
-        android:gravity="center"
-        android:layout_marginTop="30dp" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Student Task Management System"
-        android:textSize="16sp"
-        android:textColor="#555555"
-        android:gravity="center"
-        android:layout_marginTop="8dp" />
+        <!-- App Header -->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome to your Dashboard!"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#222222"
-        android:layout_marginTop="50dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CODE TITANS"
+            android:textColor="#1565C0"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Stay organized and manage your academic life."
-        android:textSize="16sp"
-        android:textColor="#666666"
-        android:layout_marginTop="12dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Student Task Management System"
+            android:textColor="#64748B"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your Workspace"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#1565C0"
-        android:layout_marginTop="40dp" />
+        <!-- Welcome Card -->
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Your personalized student dashboard."
-        android:textSize="16sp"
-        android:textColor="#555555"
-        android:layout_marginTop="12dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="#1565C0"
+            android:layout_marginTop="30dp"
+            android:elevation="5dp">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome Back!"
+                android:textColor="#FFFFFF"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your academic journey starts here."
+                android:textColor="#E3F2FD"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+        <!-- Dashboard Overview -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dashboard Overview"
+            android:textColor="#1E293B"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="15dp" />
+
+        <!-- Statistics Cards: UI placeholders only -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Total Tasks -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Tasks"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="14dp"
+                android:layout_height="1dp" />
+
+            <!-- Completed Tasks -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#16A34A" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Second Row -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+
+            <!-- Pending Tasks -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#F59E0B" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pending"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="14dp"
+                android:layout_height="1dp" />
+
+            <!-- In Progress Tasks -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B5CF6" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Progress"
+                    android:textSize="14sp"
+                    android:textColor="#64748B"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Workspace Section -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Workspace"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1E293B"
+            android:layout_marginTop="35dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stay focused, organized, and productive."
+            android:textSize="15sp"
+            android:textColor="#64748B"
+            android:layout_marginTop="10dp" />
+
+        <!-- Footer -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Developed by Code Titans"
+            android:textSize="13sp"
+            android:textColor="#94A3B8"
+            android:gravity="center"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
